@@ -9,7 +9,9 @@ chkconfig livesys-late off
 systemctl enable sshd
 systemctl start sshd
 
-```dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm```
+```
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
 
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
 dnf install fedora-workstation-repositories (ativar repositórios depois)
