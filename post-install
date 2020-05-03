@@ -1,15 +1,14 @@
 systemctl stop firewalld.service
 systemctl disable firewalld.service
-systemctl mask atd.service fedora-configure.service fedora-import-state.service fedora-loadmodules.service fedora-readonly.service
+```systemctl mask atd.service fedora-configure.service fedora-import-state.service fedora-loadmodules.service fedora-readonly.service```
 chkconfig livesys off
 chkconfig livesys-late off
 
 systemctl enable sshd
 systemctl start sshd
 
-dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm```
 
-dnf install https://dl.folkswithhats.org/fedora/$(rpm -E %fedora)/RPMS/fedy-release.rpm
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
 dnf install fedora-workstation-repositories (ativar repositórios depois)
 dnf -y install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
@@ -17,4 +16,4 @@ dnf -y install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64
 
 dnf -y groupinstall "Development Tools" "Development Libraries"
 
-dnf -y install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1 mencoder libdvdread libdvdnav lsdvd libdvdcss unrar p7zip p7zip-plugins HandBrake-gui HandBrake-cli makemkv libdvdcss obs-studio libreoffice-langpack-pt-BR flash-plugin java icedtea-web vlc audacity-freeworld audacious audacious-plugins-freeworld steam terminator libreoffice-writer libreoffice-calc libreoffice-impress libreoffice-draw libreoffice-langpack-pt-BR gimp bash-completion freetype-freeworld hddtemp kernel-devel clang-devel libcxx fedy python2-pystatgrab python3-pystatgrab lm_sensors google-chrome-stable telegram-desktop wget curl nautilus-dropbox conky conky-manager
+```dnf -y install gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1 mencoder libdvdread libdvdnav lsdvd libdvdcss unrar p7zip p7zip-plugins HandBrake-gui HandBrake-cli makemkv libdvdcss obs-studio libreoffice-langpack-pt-BR flash-plugin java icedtea-web vlc audacity-freeworld audacious audacious-plugins-freeworld steam terminator libreoffice-writer libreoffice-calc libreoffice-impress libreoffice-draw libreoffice-langpack-pt-BR gimp bash-completion freetype-freeworld hddtemp kernel-devel clang-devel libcxx fedy python2-pystatgrab python3-pystatgrab lm_sensors google-chrome-stable telegram-desktop wget curl nautilus-dropbox conky conky-manager```
