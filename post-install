@@ -1,8 +1,7 @@
 systemctl stop firewalld.service
 systemctl disable firewalld.service
-```
-systemctl mask atd.service fedora-configure.service fedora-import-state.service fedora-loadmodules.service fedora-readonly.service
-```
+
+`systemctl mask atd.service fedora-configure.service fedora-import-state.service fedora-loadmodules.service fedora-readonly.service`
 chkconfig livesys off
 chkconfig livesys-late off
 
